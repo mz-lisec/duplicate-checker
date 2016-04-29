@@ -1,3 +1,7 @@
+// Duplicate code checker based on a simple Levenshtein distance.
+//
+// Author: Sifan Weng(szefany@gmail.com)
+
 #include <algorithm>
 #include <cstdio>
 #include <cstring>
