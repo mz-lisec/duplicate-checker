@@ -80,6 +80,9 @@ double CalculateScore(const std::string& a, const std::string& b) {
     }
   }
   double result = 1 - (double)dp[len_a & 1][len_b] / std::max(len_a, len_b);
+  for (int i = 0; i < 2; ++ i) {
+    delete [] dp[i];
+  }
   delete [] dp;
   return result;
 }
