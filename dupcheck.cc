@@ -79,7 +79,9 @@ double CalculateScore(const std::string& a, const std::string& b) {
                               dp[(i - 1) & 1][j - 1] + (a[i - 1] != b[j - 1]));
     }
   }
-  return 1 - (double)dp[len_a & 1][len_b] / std::max(len_a, len_b);
+  double result = 1 - (double)dp[len_a & 1][len_b] / std::max(len_a, len_b);
+  delete [] dp;
+  return result;
 }
 
 void DupCheck(const std::vector<std::string>& files,
